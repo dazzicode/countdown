@@ -14,6 +14,10 @@ const startDate = new Date('2026-01-17T00:00:00-03:00')
 // Data da viagem
 const targetDate = new Date('2026-12-30T00:00:00-03:00')
 
+const now = new Date()
+const total = datetimeToDays(targetDate, startDate)
+const todayIsDayNum = datetimeToDays(targetDate, now)
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +42,21 @@ let interval = null
 | COUNTDOWN
 |--------------------------------------------------------------------------
 */
+function datetimeToDays(d1, d2) {
+  let diffByMillis = d2 - d1;
+  let millisecondsByDay = 24 * 60 * 60 * 1000;
+  return diffByMillis / millisecondsByDay;
+}
+
+
 
 function updateCountdown() {
   const now = new Date()
+
+  const ytotal = datetimeToDays(targetDate, startDate)
+  const dayNo = datetimeToDays(targetDate, now)
+
+  const progressBar = ( 1 - (dayNo/ytotal)) * 100.0
 
   const difference =
       targetDate.getTime() - now.getTime()
@@ -62,13 +78,8 @@ function updateCountdown() {
   /*
    * Progresso de 0 a 100
    */
-  progress.value = Math.min(
-      100,
-      Math.max(
-          0,
-          (elapsed / totalDuration) * 100
-      )
-  )
+  progress.value = progressBar
+  console.log("progress", progress.value)
 
 
   /*
@@ -289,7 +300,7 @@ onUnmounted(() => {
         <div
             class="plane"
             :style="{
-            left: `${100 - progress}%`
+            left: `${progress}%`
           }"
         >
           ✈︎
