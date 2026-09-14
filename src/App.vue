@@ -336,7 +336,7 @@ body,
 
   width: 100%;
   height: 100%;
-
+  background: #000;
 }
 
 
@@ -344,7 +344,7 @@ body {
 
   margin: 0;
 
-  background: #ffffff;
+  background: #000;
 
 }
 
@@ -369,9 +369,9 @@ body {
 
   justify-content: center;
 
-  background: #ffffff;
 
-  color: #1d1d1f;
+
+  color: #ffffff;
 
   font-family:
       -apple-system,
@@ -443,7 +443,7 @@ body {
   font-variant-numeric:
       tabular-nums;
 
-  color: #1d1d1f;
+  color: #ffffff;
 
 }
 
@@ -460,7 +460,7 @@ body {
 
   padding-left: 0.32em;
 
-  color: #86868b;
+  color: #ffffff;
 
 }
 
@@ -493,7 +493,7 @@ body {
   font-variant-numeric:
       tabular-nums;
 
-  color: #424245;
+  color: #ffffff;
 
 }
 
@@ -502,7 +502,7 @@ body {
 
   margin: 0 9px;
 
-  color: #b0b0b3;
+  color: #50C878;
 
   font-weight: 300;
 
@@ -527,7 +527,7 @@ body {
 
   padding-left: 0.22em;
 
-  color: #86868b;
+  color: #ffffff;
 
 }
 
@@ -540,7 +540,7 @@ body {
 
   font-size: 10px;
 
-  color: #a1a1a6;
+  color: #ffffff;
 
 }
 
@@ -639,19 +639,27 @@ body {
           -50%
       );
 
-  font-size: 19px;
+  font-size: 30px;
 
   line-height: 1;
 
-  color: #1d1d1f;
+  color: #ffffff;
 
   transition:
       left 1s linear;
 
-  background: #ffffff;
+  /*background: #ffffff;*/
 
-  padding: 0 8px;
-
+  /*padding: 0 8px;*/
+  text-shadow:
+      0 0 46px #50C878,
+      0 0 80px #50C878,
+      0 0 21px #50C878,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
 }
 
 
