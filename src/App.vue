@@ -277,7 +277,7 @@ onUnmounted(() => {
           <div
               class="progress-line"
               :style="{
-              width: `${progress}%`
+              width: `100%`
             }"
           />
 
@@ -584,7 +584,13 @@ body {
 
   height: 1px;
 
-  background: #f0f0f0;
+  background: #50C878;
+  box-shadow: 0 0 .2rem #fff,
+  0 0 .2rem #fff,
+  0 0 2rem #50C878,
+  0 0 0.8rem #50C878,
+  0 0 2.8rem #50C878,
+  inset 0 0 1.3rem #50C878;
 
   transform:
       translateY(-50%);
