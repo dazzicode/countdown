@@ -12,7 +12,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 const startDate = new Date('2026-01-17T00:00:00-03:00')
 
 // Data da viagem
-const targetDate = new Date('2026-12-30T00:00:00-03:00')
+const targetDate = new Date('2026-12-29T23:59:00-03:00')
 
 const now = new Date()
 const total = datetimeToDays(targetDate, startDate)
